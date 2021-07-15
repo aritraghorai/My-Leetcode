@@ -4,6 +4,7 @@ import java.util.Scanner;
  !Name: Aritra Ghorai
  !Date:14/07/2021
  ?Program Details:67.Add Binary
+ *https://leetcode.com/problems/add-binary/submissions/
    */
 public class Q19_AddTwoBinary {
     public static void main(String[] args) {
