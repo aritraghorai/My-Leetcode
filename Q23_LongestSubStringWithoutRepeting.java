@@ -4,7 +4,6 @@
  ?Program Details:3.Longest Substring Without Repeating Characters
  *https://leetcode.com/problems/longest-substring-without-repeating-characters/
    */
-package String;
 
 import java.util.HashMap;
 import java.util.Scanner;
