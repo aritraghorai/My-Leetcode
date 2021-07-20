@@ -5,11 +5,11 @@
  *https://leetcode.com/problems/longest-palindromic-substring/
    */
 public class Q25LongestPalindromeSubString {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-    }
+  }
 
-    // public static String longestPalindrome(String s) {
-    // int i = 0, j = 0;
-    // }
+  // public static String longestPalindrome(String s) {
+  // int i = 0, j = 0;
+  // }
 }
