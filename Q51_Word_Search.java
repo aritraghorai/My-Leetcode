@@ -7,7 +7,16 @@
    */
 public class Q51_Word_Search {
     public static boolean exist(char[][] board, String word) {
-        return exist(board, "", word, 0, 0, new boolean[board.length][board[0].length], 0);
+        boolean bool = false;
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                bool = exist(board, "", word, i, j, new boolean[board.length][board[0].length], 0);
+                if (bool == true) {
+                    return true;
+                }
+            }
+        }
+        return bool;
     }
 
     public static boolean exist(char[][] board, String recS, String word, int row, int colm, boolean[][] chack,
