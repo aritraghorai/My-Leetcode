@@ -6,7 +6,7 @@ import java.util.Scanner;
  ?Program Details: 283. Move Zeroes
  *https://leetcode.com/problems/move-zeroes/
    */
-public class Q52WordSearch {
+public class Q52MoveZeros {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
