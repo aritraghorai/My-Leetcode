@@ -9,9 +9,15 @@ import java.util.Scanner;
 public class Q84_HouseRobber {
     public static int rob(int[] nums) {
         // return rob(nums, 0, new Integer[nums.length]);
-        int[] storage = new int[nums.length + 2];
+        // int[] storage = new int[nums.length + 2];
+        // for (int i = nums.length - 1; i >= 0; i--) {
+        // storage[i] = Math.max(storage[i + 1], storage[i + 2] + nums[i]);
+        // }
+        int[] storage = new int[3];
         for (int i = nums.length - 1; i >= 0; i--) {
-            storage[i] = Math.max(storage[i + 1], storage[i + 2] + nums[i]);
+            storage[0] = Math.max(storage[1], storage[2] + nums[i]);
+            storage[2] = storage[1];
+            storage[1] = storage[0];
         }
         return storage[0];
     }
