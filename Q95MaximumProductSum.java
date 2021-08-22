@@ -8,23 +8,34 @@ import java.util.Scanner;
    */
 public class Q95MaximumProductSum {
     public static int maxProduct(int[] nums) {
-
-        int maxVal = nums[0];
-        int minVal = nums[0];
-
-        int maxProduct = nums[0];
-        for (int i = 1; i < nums.length; ++i) {
-
-            if (nums[i] < 0)
-                maxVal = maxVal ^ minVal ^ (minVal = maxVal);
-
-            maxVal = Math.max(nums[i], nums[i] * maxVal);
-            minVal = Math.min(nums[i], nums[i] * minVal);
-
-            maxProduct = Math.max(maxProduct, maxVal);
+        if (nums.length == 1) {
+            return nums[0];
         }
+        int product = 1;
+        int maxProduct = Integer.MIN_VALUE;
+        for (int a : nums) {
+            if (a != 0) {
+                product *= a;
+                if (product > maxProduct) {
+                    maxProduct = product;
+                }
+            } else {
+                product = 1;
+            }
+        }
+        product = 1;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            if (nums[i] != 0) {
+                product *= nums[i];
+                if (product > maxProduct) {
+                    maxProduct = product;
+                }
+            } else {
+                product = 1;
+            }
 
-        return maxProduct;
+        }
+        return Math.max(maxProduct, 0);
     }
 
     public static void main(String[] args) {
