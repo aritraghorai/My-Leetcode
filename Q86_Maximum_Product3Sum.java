@@ -6,13 +6,14 @@ import java.util.Arrays;
  ?Program Details: 628. Maximum Product of Three Numbers
 *https://leetcode.com/problems/maximum-product-of-three-numbers/
    */
-public class Q86_Maximum_ProductSum {
+public class Q86_Maximum_Product3Sum {
     public int maximumProduct(int[] nums) {
         Arrays.sort(nums);
         int n = nums.length;
         int frsitMax = nums[n - 1] * nums[n - 2] * nums[n - 3];
         int lastMax = nums[0] * nums[1] * nums[n - 1];
         return Math.max(frsitMax, lastMax);
+        
     }
 
 }
