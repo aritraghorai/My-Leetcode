@@ -22,7 +22,7 @@ public class Q78_nth_Tribonacci_Number {
         storage[1] = 1;
         storage[2] = 1;
         for (int i = 3; i <= n; i++) {
-            int cal = storage[1] + storage[2] + storage[3];
+            int cal = storage[0] + storage[1] + storage[2];
             storage[0] = storage[1];
             storage[1] = storage[2];
             storage[2] = cal;
